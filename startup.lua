@@ -1,5 +1,5 @@
 -- Auto-updater (GitHub Raw)
-local BASE = "https://raw.githubusercontent.com/Shade50/turtles-cc/turtle/"
+local BASE = "https://raw.githubusercontent.com/Shade50/turtles-cc/main/"
 local FILES = { "main.lua" }
 
 local function download(url, path)
