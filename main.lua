@@ -5,7 +5,7 @@
 -- ====== SETTINGS ======
 local L = 20   -- length (forward)
 local W = 20   -- width  (to the right)
-local H = 20   -- height (downwards)
+local H = 5   -- height (downwards)
 local RETURN_HOME = true
 
 -- Inventory handling:
