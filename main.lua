@@ -3,7 +3,7 @@
 
 local L = 20
 local W = 20
-local H = 20
+local H = 3
 
 local x,y,z,dir = 0,0,0,0 -- 0=F,1=R,2=B,3=L
 
