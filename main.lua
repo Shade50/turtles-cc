@@ -136,6 +136,17 @@ local function mineLayer()
   return true
 end
 
+local function goStartSameDepth()
+  -- revient à x=0,y=0 SANS changer z
+  if y>0 then face(3) elseif y<0 then face(1) end
+  while y~=0 do fwd() end
+
+  if x>0 then face(2) elseif x<0 then face(0) end
+  while x~=0 do fwd() end
+
+  face(0)
+end
+
 local function mine()
   print("Mining "..L.."x"..W.."x"..H.." (down)")
   digF()
@@ -155,16 +166,7 @@ local function mine()
   print(STOP and "Stopped." or "Done.")
 end
 
-local function goStartSameDepth()
-  -- revient à x=0,y=0 SANS changer z
-  if y>0 then face(3) elseif y<0 then face(1) end
-  while y~=0 do fwd() end
 
-  if x>0 then face(2) elseif x<0 then face(0) end
-  while x~=0 do fwd() end
-
-  face(0)
-end
 
 -- Run both: mining + listening
 parallel.waitForAny(listen, mine)
