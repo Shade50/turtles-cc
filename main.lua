@@ -18,7 +18,7 @@ local function digF() while turtle.detect() do turtle.dig() sleep(0.02) end end
 local function digU() while turtle.detectUp() do turtle.digUp() sleep(0.02) end end
 local function digD() while turtle.detectDown() do turtle.digDown() sleep(0.02) end end
 
-rednet.open("left") -- adapte si le modem est ailleurs
+rednet.open("right") -- adapte si le modem est ailleurs
 
 local STOP = false
 
@@ -69,11 +69,17 @@ local function invFull()
   return true
 end
 
-local function dumpBelow()
+local function dumpBehind()
+  turtle.turnLeft()
+  turtle.turnLeft() -- demi-tour
+
   for i=1,16 do
     turtle.select(i)
-    turtle.dropDown()
+    turtle.drop()
   end
+
+  turtle.turnLeft()
+  turtle.turnLeft() -- se remet face avant
   turtle.select(1)
 end
 
@@ -109,7 +115,7 @@ end
 local function dumpAndReturn()
   local sx,sy,sz,sd = x,y,z,dir
   goHome()
-  dumpBelow()
+  dumpBehind()
   goTo(sx,sy,sz,sd)
 end
 
@@ -141,6 +147,6 @@ for layer=1,H do
 end
 
 goHome()
-dumpBelow()
+dumpBehind()
 
 print("Done.")
