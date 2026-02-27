@@ -1,7 +1,10 @@
 -- ===== SIMPLE VOLUME MINER + REMOTE CONTROL (HOME/STOP) =====
 -- Mines L x W x H (UP) and dumps in chest BEHIND start when full.
 -- Commands from PC: "HOME" or "STOP"
-
+print("MAIN START")
+sleep(1)
+print("MODEM LEFT: ", peripheral.getType("left"))
+sleep(1)
 local L, W, H = 20, 20, 3
 
 -- Tracking (x forward, y right, z up is NEGATIVE here)
