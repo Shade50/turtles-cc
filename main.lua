@@ -5,7 +5,7 @@ print("MAIN START")
 sleep(1)
 print("MODEM LEFT: ", peripheral.getType("left"))
 sleep(1)
-local L, W, H = 20, 20, 3
+local L, W, H = 20, 20, 4
 
 -- Tracking (x forward, y right, z up is NEGATIVE here)
 local x, y, z, dir = 0, 0, 0, 0 -- dir: 0=F,1=R,2=B,3=L
