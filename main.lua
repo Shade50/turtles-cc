@@ -67,7 +67,7 @@ end
 
 local function goHome()
   -- since up makes z negative, home is z=0 => while z<0 go DOWN
-  while z < 0 do down() end
+  while z > 0 do up() end
 
   if y>0 then face(3) elseif y<0 then face(1) end
   while y~=0 do fwd() end
@@ -147,7 +147,7 @@ local function mine()
     goHome()
     if not ok then break end
 
-    if layer < H then up(); digF() end
+    if layer < H then down(); digF() end
   end
 
   goHome()
