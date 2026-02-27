@@ -18,7 +18,7 @@ local function digF() while turtle.detect() do turtle.dig() sleep(0.02) end end
 local function digU() while turtle.detectUp() do turtle.digUp() sleep(0.02) end end
 local function digD() while turtle.detectDown() do turtle.digDown() sleep(0.02) end end
 
-rednet.open("right") -- adapte si le modem est ailleurs
+rednet.open("left") -- adapte si le modem est ailleurs
 
 local STOP = false
 
